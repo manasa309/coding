@@ -27,6 +27,8 @@ str_2 = 'ILLAY'
 print (str_1 == str_2)                               #F
 print (f'{str_1.casefold() == str_2.casefold()}')    #T    #caseless string mathching\
 
+print(f'{str_1}'.isalpha)
+
 
 print ( first_name.center(10, '*'))            #PADDING     #manasa=6    10-6= 4, sooo **Manasa**
 
@@ -43,7 +45,7 @@ print(string.endswith('logy', 0, len(string)))
 print(string.endswith(('logy','Academy','Technology')))     #returns True if any one of the option fits
 print(string.casefold().endswith("technology"))             #case in-sensitive
 
-str_5 = 'hello\tthere\ti\tam\tmanasa'        # \t -> tab character    increases space basically
+str_5 = 'hello\tthere\ti\tam\tmanasa'        # \t -> tab character    (increases space basically)
 print(str_5.expandtabs())
 
 
@@ -55,12 +57,29 @@ lines = data.split("\n")                                           #splits data 
 
 # Print header in green
 print(Fore.YELLOW + lines[0].expandtabs() + Style.RESET_ALL)
-
 # Print remaining rows
 for row in lines[1::]:
     print(row.expandtabs())
 
+#the above makes the colume name yellow thats alllllllllll
+
 
 print(string.find('Academy', 0, len(string)))            #returns the index number of the searched substring. No match: -1
-print(string.index('Sagar', 0, len(string)))              #same func as find() --only diff is it returns a ValueError if substring is not found
+print(string.index('Sagar', 0, len(string))) 
+#print (string.index('manasa',0,len(string)))            #same func as find() --only diff is it returns a ValueError if substring is not found
 
+age = 20
+sentence = 'my name is {} and my age is {}'.format(full_name,age)      #formating how a text will be printed on console
+print(sentence)
+
+
+sentence2 = "I like {1} more than {0}".format("coffee", "tea")
+print(sentence2)
+
+print("helooooo".isalpha())
+
+username = input("enter username:")         #can be used to check for validity
+if username.isalpha():
+    print(f'wellllcome {username}')
+else:
+    print('please eneter valid username')
