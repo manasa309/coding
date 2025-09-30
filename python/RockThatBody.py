@@ -3,7 +3,7 @@ from rich import print
 from time import sleep
 import time
 
-lines = [      #'lines' is an array
+lines = [      #'lines' is an array and each () is an array element
     ('I wanna da-',0.06, 0.3), #1
     ('I waana dance in the light',0.05, 0.6), #2
     ('I wanna ro-',0.07, 0.3), #3
@@ -21,7 +21,7 @@ lines = [      #'lines' is an array
     ('Rock that body',0.08, 0.5) #15
 ]
 
-def PrintLyrics():                                 #delays the display of chars
+def PrintLyrics():   #delays the display of chars
     for text, char_delay, line_delay in lines:
         for char in text:
             print(char, end='',flush=True)
